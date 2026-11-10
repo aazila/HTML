@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam</title>
+</head>
+<body>
+
+<h2>Online Exam</h2>
+
+<p>1. Which is a programming language?</p>
+
+<input type="radio" name="q1" value="HTML"> HTML<br>
+<input type="radio" name="q1" value="Python"> Python<br>
+<input type="radio" name="q1" value="CSS"> CSS<br><br>
+
+<button onclick="check()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function check()
+{
+    let ans = document.querySelector(
+    'input[name="q1"]:checked');
+
+    if(ans && ans.value == "Python")
+    {
+        document.getElementById("result").innerHTML =
+        "Correct Answer!";
+    }
+    else
+    {
+        document.getElementById("result").innerHTML =
+        "Wrong Answer!";
+    }
+}
+</script>
+
+</body>
+</html>
